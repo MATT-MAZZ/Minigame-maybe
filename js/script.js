@@ -1,3 +1,4 @@
+
 let plus = document.querySelector (".plus");
 let counter = document.querySelector (".counter");
 let point = document.querySelectorAll ('.fas');
@@ -73,19 +74,32 @@ setInterval(pushNotice, 3000);
     function pushNotice () {
     
         function negativeNotice() {
-            notice.classList.add("notice_negative");
+            
             notice.style.right = "0"
-            setTimeout(() => notice.classList.remove("notice_negative"), 2000);
             setTimeout(() => notice.style.right = "", 2500);
+            notice.classList.add("notice_negative");
+            setTimeout(() => notice.classList.remove("notice_negative"), 2000);
+            
         }
 
         function positiveNotice() {
-            notice.classList.add("notice_positive");
+            
             notice.style.left = "0"
-            setTimeout(() => notice.classList.remove("notice_positive"), 2000);
             setTimeout(() => notice.style.left = "", 2500);
+            notice.classList.add("notice_positive");
+            setTimeout(() => notice.classList.remove("notice_positive"), 2000);
+            
         }
 
+        function goalNegative () {
+            goal.classList.add("goal_negative");
+            setTimeout(() => goal.classList.remove("goal_negative"), 2000);
+        }
+
+        function goalPositive () {
+            goal.classList.add("goal_positive");
+            setTimeout(() => goal.classList.remove("goal_positive"), 2000);
+        }
 
         
         let rNum2 = Math.floor(Math.random () * 101);
@@ -95,6 +109,7 @@ setInterval(pushNotice, 3000);
             
             case (rNum2 > 96 && rNum2 < 98 && width > 30):
             positiveNotice();
+            goalPositive();
             notice.innerHTML = "<div>Победил<br>по жизни</div>";
             setTimeout(() => notice.innerHTML = "", 2400);
             width += 3000;
@@ -102,6 +117,7 @@ setInterval(pushNotice, 3000);
 
             case (rNum2 > 20 && rNum2 < 30 && width > 30):
             positiveNotice();
+            goalPositive();
             notice.innerHTML = "<div>Вдохновение</div>";
             setTimeout(() => notice.innerHTML = "", 2400);
             width += 130;
@@ -109,6 +125,7 @@ setInterval(pushNotice, 3000);
 
             case (rNum2 > 30 && rNum2 < 45 && width > 30):
             positiveNotice();
+            goalPositive();
             notice.innerHTML = "<div>Удача</div>";
             setTimeout(() => notice.innerHTML = "", 2400);
             width += 70;
@@ -116,6 +133,7 @@ setInterval(pushNotice, 3000);
 
             case (rNum2 > 1 && rNum2 < 20 && width > 30):
             negativeNotice();
+            goalNegative();
             notice.innerHTML = "<div>Поленился</div>";
             setTimeout(() => notice.innerHTML = "", 2400);
             width -= 40;
@@ -123,6 +141,7 @@ setInterval(pushNotice, 3000);
 
             case (rNum2 > 45 && rNum2 < 50 && width > 30):
             negativeNotice();
+            goalNegative();
             notice.innerHTML = "<div>Заболел</div>";
             setTimeout(() => notice.innerHTML = "", 2400);
             width -= 100;
@@ -130,6 +149,7 @@ setInterval(pushNotice, 3000);
 
             case (rNum2 > 50 && rNum2 < 60 && width > 30):
             negativeNotice();
+            goalNegative();
             notice.innerHTML = "<div>Неудача</div>";
             setTimeout(() => notice.innerHTML = "", 2400);
             width -= 30;
@@ -137,6 +157,7 @@ setInterval(pushNotice, 3000);
 
             case (rNum2 > 98 && rNum2 < 100 && width > 30):
             negativeNotice();
+            goalNegative();
             notice.innerHTML = "<div>Военкомат</div>";
             setTimeout(() => notice.innerHTML = "", 2400);
             width = 30;
@@ -162,6 +183,11 @@ setInterval(pushNotice, 3000);
 //         this.classList.add("active");
 //     })
 // })
+
+
+
+
+
 
 
 

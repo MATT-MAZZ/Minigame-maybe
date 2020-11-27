@@ -60,10 +60,20 @@ body {
             left: 0;
             margin: 5px;
             background-color: #C82A2A;
-            transition: .5s linear;
+            transition: 0.5s linear;
             border-radius: 50px;
             position: absolute;
             overflow: hidden;
+        }
+
+        .goal_positive {
+            background-color: rgb(9, 177, 3);
+            transition: 0.5s;
+        }
+
+        .goal_negative {
+            background-color: darken(#C82A2A, 30%);
+            transition: 0.5s;
         }
 
 
@@ -137,7 +147,7 @@ body {
         
         .button_container {
             position: relative;
-            width: 295px;
+            width: 350px;
             height: 165px;
             display: flex;
             
@@ -145,7 +155,7 @@ body {
             
 
             .plus  {
-                width: 295px;
+                width: 350px;
                 height: 95px;
                 padding: 5px;
                 transition: 0.1s;

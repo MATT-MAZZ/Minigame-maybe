@@ -159,7 +159,7 @@ body {
   transition: 0.7s;
 }
 .wraper .container .button_container .notice_negative {
-  width: 600px;
+  width: 620px;
   right: 0;
   color: #C82A2A;
   transition: 0.7s;
@@ -169,7 +169,7 @@ body {
   left: 20px;
 }
 .wraper .container .button_container .notice_positive {
-  width: 600px;
+  width: 620px;
   left: 0;
   color: #09b103;
   transition: 0.7s;

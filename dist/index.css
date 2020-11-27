@@ -53,6 +53,14 @@ body {
   position: absolute;
   overflow: hidden;
 }
+.wraper .progress .goal_positive {
+  background-color: #09b103;
+  transition: 0.5s;
+}
+.wraper .progress .goal_negative {
+  background-color: #4a0f0f;
+  transition: 0.5s;
+}
 .wraper .progress .bars_container {
   width: 100%;
   position: absolute;
@@ -104,13 +112,13 @@ body {
 }
 .wraper .container .button_container {
   position: relative;
-  width: 295px;
+  width: 350px;
   height: 165px;
   display: flex;
   justify-content: center;
 }
 .wraper .container .button_container .plus {
-  width: 295px;
+  width: 350px;
   height: 95px;
   padding: 5px;
   transition: 0.1s;

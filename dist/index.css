@@ -1,3 +1,6 @@
+html {
+  min-width: 320px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +8,11 @@
 }
 body {
   background-color: #292929;
+  overflow: hidden;
+  height: 100vh;
 }
 .wraper {
-  padding: 60px 100px 0;
+  padding: 60px 30px 0;
 }
 .wraper .text_container {
   text-align: center;
@@ -18,71 +23,100 @@ body {
   font-size: 48px;
   color: white;
   font-weight: 400;
-  text-shadow: 3px 3px 5px #111111;
 }
 .wraper .text_container h2 {
   font-size: 54px;
   color: white;
   font-weight: 400;
-  text-shadow: 3px 3px 5px #111111;
 }
 .wraper .text_container h2 span {
   font-weight: 700;
   color: #C82A2A;
 }
-.progress {
+.wraper .progress {
   width: 100%;
   margin: 0 auto;
   background-color: #1D1D1D;
   height: 40px;
-  border-radius: 50px;
   box-shadow: inset 0 3px 5px #111111;
   position: relative;
+  border-radius: 50px;
 }
-.progress .bars_container {
-  width: 100%;
-  position: absolute;
-  display: flex;
-  overflow: hidden;
-}
-.progress .bars_container .bar {
-  height: 40px;
-  background-color: #292929;
-  padding: 0 10px;
-  z-index: 3;
-  margin-left: 10%;
-  box-shadow: 3px 0 5px #111111;
-}
-.progress .goal {
+.wraper .progress .goal {
   height: 30px;
   width: 30px;
+  left: 0;
   margin: 5px;
   background-color: #C82A2A;
   transition: 0.5s linear;
   border-radius: 50px;
   position: absolute;
+  overflow: hidden;
 }
-.container {
-  margin: 100px auto 0;
+.wraper .progress .bars_container {
+  width: 100%;
+  position: absolute;
+  display: flex;
+}
+.wraper .progress .bars_container .bar_wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4.4%;
+  flex-wrap: nowrap;
+}
+.wraper .progress .bars_container .bar_wraper i {
+  font-size: 30px;
+  color: #1D1D1D;
+  transition: 0.3s;
+}
+.wraper .progress .bars_container .bar_wraper .active {
+  color: #C82A2A;
+  transition: 0.3s;
+}
+.wraper .progress .bars_container .bar_wraper p {
+  display: block;
+  padding-bottom: 5px;
+  color: white;
+  font-size: 20px;
+}
+.wraper .progress .bars_container .bar_wraper .skill {
+  color: #C82A2A;
+  font-weight: 600;
+  font-size: 24px;
+}
+.wraper .progress .bars_container .bar_wraper .bar {
+  height: 40px;
+  background-color: #292929;
+  width: 10px;
+}
+.wraper .container {
+  margin: 200px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container .counter {
-  text-shadow: 3px 3px 5px #111111;
+.wraper .container .counter {
   width: 200px;
   font-size: 50px;
   color: white;
   text-align: center;
 }
-.container .plus {
-  width: 300px;
-  height: 100px;
-  margin: 5px;
+.wraper .container .button_container {
+  position: relative;
+  width: 295px;
+  height: 165px;
+  display: flex;
+  justify-content: center;
+}
+.wraper .container .button_container .plus {
+  width: 295px;
+  height: 95px;
+  padding: 5px;
+  transition: 0.1s;
   font-size: 50px;
   cursor: pointer;
   background-color: #C82A2A;
-  position: relative;
   border-radius: 45px;
   text-transform: uppercase;
   color: white;
@@ -92,4 +126,103 @@ body {
   margin-top: 30px;
   box-shadow: 3px 3px 5px #111111;
   -webkit-user-select: none;
+  z-index: 1;
+}
+.wraper .container .button_container .plus_tap {
+  padding: 0;
+  margin-top: 35px;
+  font-size: 45px;
+}
+.wraper .container .button_container .notice {
+  width: 255px;
+  padding: 0 20px;
+  height: 90px;
+  position: absolute;
+  box-shadow: 3px 3px 5px #111111;
+  border-radius: 45px;
+  background-color: #1D1D1D;
+  z-index: -1;
+  top: 35px;
+  display: flex;
+  align-items: center;
+  color: transparent;
+  font-size: 35px;
+  text-transform: uppercase;
+  transition: 0.7s;
+}
+.wraper .container .button_container .notice_negative {
+  width: 600px;
+  right: 0;
+  color: #C82A2A;
+  transition: 0.7s;
+}
+.wraper .container .button_container .notice_negative div {
+  position: absolute;
+  left: 20px;
+}
+.wraper .container .button_container .notice_positive {
+  width: 600px;
+  left: 0;
+  color: #09b103;
+  transition: 0.7s;
+}
+.wraper .container .button_container .notice_positive div {
+  position: absolute;
+  right: 20px;
+}
+@media only all and (max-width: 1025px) {
+  .wraper .progress {
+    height: 30px;
+    box-shadow: inset 0 3px 5px #111111;
+    position: relative;
+    border-radius: 50px;
+  }
+  .wraper .progress .goal {
+    height: 20px;
+    width: 30px;
+    left: 0;
+    margin: 5px;
+    background-color: #C82A2A;
+    transition: 0.5s linear;
+    border-radius: 50px;
+    position: absolute;
+  }
+  .wraper .text_container p {
+    font-size: 24px;
+  }
+  .wraper .text_container h2 {
+    font-size: 34px;
+  }
+  .wraper .progress .bars_container .bar_wraper {
+    margin-left: 3.3%;
+  }
+  .wraper .progress .bars_container .bar_wraper i {
+    font-size: 30px;
+  }
+  .wraper .progress .bars_container .bar_wraper p {
+    display: block;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 14px;
+  }
+  .wraper .progress .bars_container .bar_wraper .skill {
+    color: #C82A2A;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .wraper .progress .bars_container .bar_wraper .bar {
+    height: 40px;
+    background-color: #292929;
+    width: 10px;
+  }
+}
+@media only all and (max-width: 1367px) {
+  .wraper .progress .bars_container .bar_wraper {
+    margin-left: 3.3%;
+  }
+}
+@media only all and (max-width: 1439px) {
+  .wraper .progress .bars_container .bar_wraper {
+    margin-left: 3.4%;
+  }
 }

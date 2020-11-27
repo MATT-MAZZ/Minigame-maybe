@@ -1,0 +1,324 @@
+html {
+    min-width: 320px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    background-color: #292929;
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+
+.wraper {
+    padding: 60px 30px 0;
+
+    .text_container {
+        text-align: center;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+
+        p {
+            font-size: 48px;
+            color: white;
+            font-weight: 400;
+            
+        }
+
+        h2 {
+            font-size: 54px;
+            color: white;
+            font-weight: 400;
+            
+
+            span {
+                font-weight: 700;
+                color: #C82A2A;
+            }
+        }
+    }
+    
+    .progress {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #1D1D1D;
+        height: 40px;
+        
+        box-shadow: inset 0 3px 5px rgb(17, 17, 17);
+        position: relative;
+        border-radius: 50px;
+    
+        .goal {
+            height: 30px;
+            width: 30px;
+            left: 0;
+            margin: 5px;
+            background-color: #C82A2A;
+            transition: .5s linear;
+            border-radius: 50px;
+            position: absolute;
+            overflow: hidden;
+        }
+
+
+        .bars_container {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            
+            
+            .bar_wraper {
+                display: flex;
+                flex-direction: column;
+               
+                align-items: center;
+                margin-left: 4.4%;
+                flex-wrap: nowrap;
+
+                i {
+                    font-size: 30px;
+                    color: #1D1D1D;
+                    transition: 0.3s;
+                }
+
+                .active {
+                    color: #C82A2A;
+                    transition: 0.3s;
+                }
+
+                p {
+                    display: block;
+                    padding-bottom: 5px;
+                    color: white;
+                    font-size: 20px;
+                }
+
+                .skill {
+                    color: #C82A2A;
+                    font-weight: 600;
+                    font-size: 24px;
+                }
+
+                .bar {
+                    height: 40px;
+                    background-color: #292929;
+                    width: 10px;
+                }
+            }
+
+            
+        }
+        
+        
+    }
+
+    
+
+    .container {
+        margin: 200px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .counter {
+            
+            width: 200px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+        }
+        
+        .button_container {
+            position: relative;
+            width: 295px;
+            height: 165px;
+            display: flex;
+            
+            justify-content: center;
+            
+
+            .plus  {
+                width: 295px;
+                height: 95px;
+                padding: 5px;
+                transition: 0.1s;
+                font-size: 50px;
+                cursor: pointer;
+                background-color: #C82A2A;
+                border-radius: 45px;
+                text-transform: uppercase;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30px;
+                box-shadow: 3px 3px 5px rgb(17, 17, 17);
+                -webkit-user-select: none;
+                z-index: 1;
+            }
+            
+            .plus_tap {
+                padding: 0;
+                margin-top: 35px;
+                font-size: 45px;
+            }
+    
+            .notice { 
+                width: 255px;
+                padding: 0 20px;
+                height: 90px;
+                position: absolute;
+                box-shadow: 3px 3px 5px rgb(17, 17, 17);
+                border-radius: 45px;
+                background-color: #1D1D1D;
+                z-index: -1;
+                top: 35px;
+                display: flex;
+                align-items: center;
+                color: transparent;
+                font-size: 35px;
+                text-transform: uppercase;
+                transition: 0.7s;
+            }
+
+            .notice_negative {
+                width: 600px;
+                
+                right: 0;
+                color: #C82A2A;
+                transition: 0.7s;
+
+                div {
+                    position: absolute;
+                    left: 20px;
+                }
+            }
+
+            .notice_positive {
+                width: 600px;
+                
+                left: 0;
+                color: rgb(9, 177, 3);
+                transition: 0.7s;
+
+                div {
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+    
+            
+        }
+
+    }
+}
+
+
+
+    
+
+
+
+
+
+
+@media only all and (max-width: 1025px) {
+    .wraper {
+        .progress {
+            
+            height: 30px;
+            
+            box-shadow: inset 0 3px 5px rgb(17, 17, 17);
+            position: relative;
+            border-radius: 50px;
+        
+            .goal {
+                height: 20px;
+                width: 30px;
+                left: 0;
+                margin: 5px;
+                background-color: #C82A2A;
+                transition: .5s linear;
+                border-radius: 50px;
+                position: absolute;
+            }
+        }
+
+        .text_container {
+            p {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 34px;
+            }
+        }
+
+        .progress {
+            .bars_container {
+                .bar_wraper {
+                    margin-left: 3.3%;
+
+                    i {
+                        font-size: 30px;
+                        
+                    }
+    
+                    p {
+                        display: block;
+                        padding-bottom: 5px;
+                        color: white;
+                        font-size: 14px;
+                    }
+    
+                    .skill {
+                        color: #C82A2A;
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+    
+                    .bar {
+                        height: 40px;
+                        background-color: #292929;
+                        width: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 1367px) {
+    .wraper {
+        .progress {
+            .bars_container {
+                .bar_wraper {
+                    margin-left: 3.3%;
+                }
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 1439px) {
+    .wraper {
+        .progress {
+            .bars_container {
+                .bar_wraper {
+                    margin-left: 3.4%;
+                }
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 1535px) {
+
+}
